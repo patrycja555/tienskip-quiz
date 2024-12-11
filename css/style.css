@@ -10,10 +10,11 @@ body{
     display: flex;
     flex-direction: column; 
 }
-.home-page{
+section{
     border: 30px solid white; 
     padding: 30px;
     height: 100%;
+    display: none;
 }
 h1{
     font-family: "aglet-slab", sans-serif;
