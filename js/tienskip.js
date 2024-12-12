@@ -5,10 +5,12 @@ $(document).ready(function(e) {
 });
 
 var SiteManager = {
-    MONEY_STEPS:10,
+    MONEY_STEPS:100000,
 
     nMoneyInTheBank:1000000,
-    myMoneyDisplay:$('.js-moneys'),
+    myMoneyDisplay:$('.js-climate'),
+    nClimate: 0, 
+    myBudgetDisplay: $('.js-budget'),
 
     init: function() {
         $('.js-start-button').on('click', this.onStartButtonClicked.bind(this));
@@ -26,20 +28,26 @@ var SiteManager = {
     },
 
     onPlusClicked: function() {
-        this.nMoneyInTheBank += this.MONEY_STEPS;
+        if (this.nMoneyInTheBank >= this.MONEY_STEPS){
+            this.nClimate += this.MONEY_STEPS;
+            this.nMoneyInTheBank -= this.MONEY_STEPS;
+        }
         this.outputMoneyInTheBank();
+        this.outputClimate();
     },
 
     onMinusClicked: function() {
-        this.nMoneyInTheBank -= this.MONEY_STEPS;
-
-        if(this.nMoneyInTheBank < 0){
-            this.nMoneyInTheBank = 0;
-        }
+        if(this.nClimate >= this.MONEY_STEPS){
+            this.nClimate -= this.MONEY_STEPS;
+            this.nMoneyInTheBank += this.MONEY_STEPS;
+        } 
         this.outputMoneyInTheBank();
+        this.outputClimate();
     },
-
+    outputClimate: function(){
+    this.myMoneyDisplay.html(this.nClimate);
+    },
     outputMoneyInTheBank: function() {
-        this.myMoneyDisplay.html(this.nMoneyInTheBank);
+    this.myBudgetDisplay.html(this.nMoneyInTheBank);
     }
 };
