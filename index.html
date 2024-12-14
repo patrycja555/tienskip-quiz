@@ -9,9 +9,9 @@
 </head>
 <body>
 <section class="home-page js-home-page">
-    <h1>Tienskip!</h1>
-    <div class="about-tienskip">
-        <p>doe er zelf wat aan</p>
+    <div class="tienskip-logo">
+    <h1>Tienskip</h1>
+    <p class="about-tienskip">doe er zelf wat aan</p>
     </div>
     <div class="game-description">
         <p>How should the city allocate funds between renewable energy, public transport, sport and leisure and affordable housing?</p>
@@ -22,25 +22,97 @@
 </section>
 
 <section class="selection-screen js-selection-screen">
-    <h1>Tienskip</h1>
-    <div class="about-tienskip">
-        <p>doe er zelf wat aan</p>
+    <div class="tienskip-logo">
+        <h1>Tienskip</h1>
+        <p class="about-tienskip">doe er zelf wat aan</p>
+        <p class="js-budget">1000000</p>
     </div>
-    <p class="js-budget">1000000</p>
-<div class="categories">
-    <ul>
-    <li>Climate and energy</li>
-    <li>Public transport</li>
-    <li>Sport and leisure</li>
-    <li>Housing</li>
-    </ul>
+        <div class="categories">
+            <div class="category">
+                <img src="climate-icon.png" alt="climate and energy" class="category-icon">
+                <h2>Climate and energy</h2>
+                <div class="money">
+                    <button class="js-plus-button">+</button>
+                    <h3 class="js-climate">0</h3>
+                    <button class="js-minus-button">-</button>
+                </div>
+            </div>
+            <div class="category">
+                <img src="transport-icon.png" alt="public transport" class="category-icon">
+                <h2>Public transport</h2>
+                <div class="money">
+                    <button class="js-plus-button-transport">+</button>
+                    <h3 class="js-transport">0</h3>
+                    <button class="js-minus-button-transport">-</button>
+                </div>
+            </div>
+            <div class="category">
+                <img src="sport-icon.png" alt="sport and leisure" class="category-icon">
+                <h2>Sport and leisure</h2>
+                <div class="money">
+                    <button class="js-plus-button-sport">+</button>
+                    <h3 class="js-sport">0</h3>
+                    <button class="js-minus-button-sport">-</button>
+                </div>
+            </div>
+            <div class="category">
+                <img src="housing-icon.png" alt="housing" class="category-icon">
+                <h2>Housing</h2>
+                <div class="money">
+                    <button class="js-plus-button-housing">+</button>
+                    <h3 class="js-housing">0</h3>
+                    <button class="js-minus-button-housing">-</button>
+                </div>
+            </div>
+            <div class="category">
+                <img src="housing-icon.png" alt="housing" class="category-icon">
+                <h2>Healthcare</h2>
+                <div class="money">
+                    <button class="js-plus-button-healthcare">+</button>
+                    <h3 class="js-healthcare">0</h3>
+                    <button class="js-minus-button-healthcare">-</button>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-<div class="climate-money">
-    <button class="js-plus-button">+</button>
-    <button class="js-minus-button">-</button>
-    <h2 class="js-climate">0</h2>
+    <div class="js-submit-button">
+        <p>submit</p>
     </div>
+</section>
+
+<section class="climate-screen js-climate-screen">
+   <h1 class="climate-energy">climate and energy</h1>
+   <p class="js-climate-budget">0</p>
+   <p>What choices do you make around the theme of climate and energy?</p>
+   <p class="js-continue-climate">continue</p>
+</section>
+
+<section class="transport-screen js-transport-screen">
+    <h1 class="public-transport">public transport</h1>
+    <p class="js-transport-budget">0</p>
+    <p>What choices do you make around the theme of public transport?</p>
+    <p class="js-continue-transport">continue</p>
+ </section>
+
+ <section class="sport-screen js-sport-screen">
+    <h1 class="sport-leisure">Sport and leisure</h1>
+    <p class="js-sport-budget">0</p>
+    <p>What choices do you make around the theme of sport and leisure?</p>
+    <p class="js-continue-sport">continue</p>
+ </section>
+
+ <section class="housing-screen js-housing-screen">
+    <h1 class="housing">housing</h1>
+    <p class="js-housing-budget">0</p>
+    <p>What choices do you make around the theme of housing?</p>
+    <p class="js-continue-housing">continue</p>
+ </section>
+
+ <section class="healthcare-screen js-healthcare-screen">
+ <h1 class="healthcare">healthcare</h1>
+ <p class="js-healthcare-budget">0</p>
+ <p>What choices do you make around the theme of healthcare?</p>
+ <p class="js-continue-healthcare">continue</p>
 </section>
 
 <script src="js/jquery-3.7.1.min.js"></script>

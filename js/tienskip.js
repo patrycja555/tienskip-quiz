@@ -50,4 +50,5 @@ var SiteManager = {
     outputMoneyInTheBank: function() {
     this.myBudgetDisplay.html(this.nMoneyInTheBank);
     }
+     
 };
